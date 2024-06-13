@@ -25,11 +25,26 @@ struct ContentView: View {
     @State var netSalaryMontly: Int = 0
     @State var netSalaryYearly: Int = 0
     
+    var submitButton: some View {
+        HStack{
+            Spacer()
+            Button("Submit") {
+                print("Yeey, clicked")
+            }
+            .tint(.purple)
+            .buttonStyle(.borderedProminent)
+            .font(.title2)
+            .fontWeight(.semibold)
+            .padding(.top, 16)
+            Spacer()
+        }
+    }
+    
     var body: some View {
         NavigationStack {
             Form {
                 Section("Yearly salary") {
-                    TextFieldStack(textFieldName: "Gross salary:", value: $grossSalary, endSymbol: "£")
+                    TextFieldStack(textFieldName: "Gross salary:", value: $grossSalary, frontSymbol: "£")
                 }
                 Section("Pention contribution") {
                     TextFieldStackWPersents(textFieldName: "Personal:", percents: $personalContributionPercents, pounds: $personalContributionPounds)
@@ -40,13 +55,14 @@ struct ContentView: View {
                     NameAndSum(name: "Tax", sum: $calculatedTax)
                     NameAndSum(name: "NI", sum: $calculatedNI)
                 }
-                Section("Net salary") {
+                Section(header: Text("Net salary"), footer: submitButton) {
                     NameAndSum(name: "Monthly take home", sum: $netSalaryMontly)
                     NameAndSum(name: "Yearly income", sum: $netSalaryYearly)
                 }
             }
             .formStyle(.grouped)
-            .navigationTitle("Calculate your pension")
+            .navigationTitle("🪙 Calculate your pension")
+            .navigationBarTitleDisplayMode(.inline)
         }
     }
 }
@@ -58,7 +74,29 @@ struct ContentView: View {
 struct TextFieldStack: View {
     var textFieldName: String
     @Binding var value: Int
-    var endSymbol: String
+    var endSymbol: String?
+    var frontSymbol: String?
+    var bold: Bool = true
+    
+    var symbolInFront: some View {
+        Group {
+            if let frontSymbol = frontSymbol {
+                Text(frontSymbol)
+                    .foregroundColor(.purple)
+                    .fontWeight(bold ? .bold : .semibold)
+            }
+        }
+    }
+    
+    var symbolAtTheBack: some View {
+        Group {
+            if let endSymbol = endSymbol {
+                Text(endSymbol)
+                    .foregroundColor(.purple)
+                    .fontWeight(bold ? .bold : .semibold)
+            }
+        }
+    }
     
     var body: some View {
         HStack{
@@ -66,14 +104,13 @@ struct TextFieldStack: View {
                 .fontWeight(.medium)
                 .frame(width: 110, alignment: .leading)
             Spacer()
-            Text(endSymbol)
-                .foregroundColor(.purple)
-                .fontWeight(.bold)
+            symbolInFront
             TextField(textFieldName, value: $value, formatter: NumberFormatter())
                 .padding(8)
                 .overlay(RoundedRectangle(cornerRadius: 8)
                     .stroke(Color.purple, lineWidth: 1))
                 .frame(minWidth: 100, maxWidth: 120)
+            symbolAtTheBack
         }
     }
 }
@@ -113,6 +150,7 @@ struct NameAndSum: View {
         HStack {
             Text(name)
                 .fontWeight(.medium)
+                .frame(maxWidth: 150, alignment: .leading)
             Spacer()
             Text("£")
                 .foregroundColor(.purple.opacity(0.8))

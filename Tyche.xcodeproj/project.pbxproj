@@ -11,6 +11,7 @@
 		A59EF4A82C1AFC670082D6B0 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A59EF4A72C1AFC670082D6B0 /* ContentView.swift */; };
 		A59EF4AA2C1AFC690082D6B0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A59EF4A92C1AFC690082D6B0 /* Assets.xcassets */; };
 		A59EF4AD2C1AFC690082D6B0 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A59EF4AC2C1AFC690082D6B0 /* Preview Assets.xcassets */; };
+		A59EF4B42C1B15B80082D6B0 /* PensionSummary.swift in Sources */ = {isa = PBXBuildFile; fileRef = A59EF4B32C1B15B80082D6B0 /* PensionSummary.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +20,7 @@
 		A59EF4A72C1AFC670082D6B0 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		A59EF4A92C1AFC690082D6B0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A59EF4AC2C1AFC690082D6B0 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		A59EF4B32C1B15B80082D6B0 /* PensionSummary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PensionSummary.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,6 +57,7 @@
 				A59EF4A72C1AFC670082D6B0 /* ContentView.swift */,
 				A59EF4A92C1AFC690082D6B0 /* Assets.xcassets */,
 				A59EF4AB2C1AFC690082D6B0 /* Preview Content */,
+				A59EF4B32C1B15B80082D6B0 /* PensionSummary.swift */,
 			);
 			path = Tyche;
 			sourceTree = "<group>";
@@ -137,6 +140,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A59EF4B42C1B15B80082D6B0 /* PensionSummary.swift in Sources */,
 				A59EF4A82C1AFC670082D6B0 /* ContentView.swift in Sources */,
 				A59EF4A62C1AFC670082D6B0 /* TycheApp.swift in Sources */,
 			);
