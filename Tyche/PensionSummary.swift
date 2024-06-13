@@ -8,15 +8,10 @@
 import SwiftUI
 
 struct PensionSummary: View {
-    @State var pensionPot: Int = 0
-    @State var taxFreeLumpSumPercent: Int = 0
-    @State var currentAge: Int = 0
     
-    @State var taxFreeLumpSumPounds: Int = 0
-    @State var remainingPot: Int = 0
-    @State var annualIncome: Int = 0
+    @ObservedObject var vm: PensionContributionViewModel
     
-    var firstSectionHeader: some View {
+    var firstSectionFooter: some View {
         HStack {
             Spacer()
             Text("Assumptions based on retirement @60")
@@ -27,25 +22,33 @@ struct PensionSummary: View {
     
     var body: some View {
         Form {
-            Section(header: firstSectionHeader) {
+            Section(header: Text(""), footer: firstSectionFooter) {
                 VStack {
                     Text("Very beautiful graph")
                         .padding()
-                    NameAndSum(name: "Pension total", sum: $pensionPot)
+                    NameAndSum(name: "Pension total", sum: $vm.pensionPot)
                 }
-            }
-            
-            Section() {
-                TextFieldStack(textFieldName: "Tax free lump sum", value: $taxFreeLumpSumPercent, endSymbol: "%")
-                TextFieldStack(textFieldName: "Your current age", value: $currentAge, endSymbol: "years", bold: false)
+                TextFieldStack(textFieldName: "Tax free lump sum", value: $vm.taxFreeLumpSumPercent, endSymbol: "%")
+                TextFieldStack(textFieldName: "Your current age", value: $vm.currentAge, endSymbol: "years", bold: false)
             }
             
             Section("What's you get") {
-                NameAndSum(name: "Tax free lump sum", sum: $taxFreeLumpSumPounds)
-                NameAndSum(name: "Remaining pot", sum: $remainingPot)
-                NameAndSum(name: "Annual income after retirement", sum: $annualIncome)
+                NameAndSum(name: "Tax free lump sum", sum: $vm.taxFreeLumpSumPounds)
+                NameAndSum(name: "Remaining pot", sum: $vm.remainingPot)
+                NameAndSum(name: "Annual income after retirement", sum: $vm.annualIncome)
             }
         }
+        .onAppear(perform: {
+            vm.calculatePension()
+            vm.updatePensionSummary()
+        })
+        .onChange(of: vm.taxFreeLumpSumPercent, {
+            vm.updatePensionSummary()
+        })
+        .onChange(of: vm.currentAge, {
+            vm.calculatePension()
+            vm.updatePensionSummary()
+        })
         .navigationTitle("💰 Pension summary")
         .navigationBarTitleDisplayMode(.inline)
     }
@@ -53,6 +56,6 @@ struct PensionSummary: View {
 
 #Preview {
     NavigationView{
-        PensionSummary()
+        PensionSummary(vm: PensionContributionViewModel())
     }
 }

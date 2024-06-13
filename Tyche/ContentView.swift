@@ -8,34 +8,21 @@
 import SwiftUI
 
 struct ContentView: View {
-    @State var grossSalary: Int = 0
-    
-    @State var personalContributionPercents: Int = 0
-    @State var personalContributionPounds: Int = 0
-    
-    @State var companyContributionPercents: Int = 0
-    @State var companyContributionPounds: Int = 0
-    
-    @State var privatePensionPercents: Int = 0
-    @State var privatePensionPounds: Int = 0
-    
-    @State var calculatedTax: Int = 0
-    @State var calculatedNI: Int = 0
-    
-    @State var netSalaryMontly: Int = 0
-    @State var netSalaryYearly: Int = 0
+    @StateObject var vm = PensionContributionViewModel()
     
     var submitButton: some View {
         HStack{
             Spacer()
-            Button("Submit") {
-                print("Yeey, clicked")
-            }
-            .tint(.purple)
-            .buttonStyle(.borderedProminent)
-            .font(.title2)
-            .fontWeight(.semibold)
-            .padding(.top, 16)
+            NavigationLink(destination: PensionSummary(vm: vm), label: {
+                Text("See Pension Summary")
+                    .font(.title3)
+                    .fontWeight(.semibold)
+                    .frame(width: 280, height: 44)
+                    .background(.purple)
+                    .foregroundColor(.white)
+                    .cornerRadius(8)
+                    .padding(.top, 16)
+            })
             Spacer()
         }
     }
@@ -44,22 +31,34 @@ struct ContentView: View {
         NavigationStack {
             Form {
                 Section("Yearly salary") {
-                    TextFieldStack(textFieldName: "Gross salary:", value: $grossSalary, frontSymbol: "£")
+                    TextFieldStack(textFieldName: "Gross salary:", value: $vm.grossSalary, frontSymbol: "£")
                 }
                 Section("Pention contribution") {
-                    TextFieldStackWPersents(textFieldName: "Personal:", percents: $personalContributionPercents, pounds: $personalContributionPounds)
-                    TextFieldStackWPersents(textFieldName: "Company:", percents: $companyContributionPercents, pounds: $companyContributionPounds)
-                    TextFieldStackWPersents(textFieldName: "Private:", percents: $privatePensionPercents, pounds: $personalContributionPounds)
+                    TextFieldStackWPersents(textFieldName: "Personal:", percents: $vm.personalContributionPercents, pounds: $vm.personalContributionPounds)
+                    TextFieldStackWPersents(textFieldName: "Company:", percents: $vm.companyContributionPercents, pounds: $vm.companyContributionPounds)
+                    TextFieldStackWPersents(textFieldName: "Private:", percents: $vm.privatePensionPercents, pounds: $vm.privatePensionPounds)
                 }
                 Section("Additional withdrawls") {
-                    NameAndSum(name: "Tax", sum: $calculatedTax)
-                    NameAndSum(name: "NI", sum: $calculatedNI)
+                    NameAndSum(name: "Tax", sum: $vm.calculatedTax)
+                    NameAndSum(name: "NI", sum: $vm.calculatedNI)
                 }
                 Section(header: Text("Net salary"), footer: submitButton) {
-                    NameAndSum(name: "Monthly take home", sum: $netSalaryMontly)
-                    NameAndSum(name: "Yearly income", sum: $netSalaryYearly)
+                    NameAndSum(name: "Monthly take home", sum: $vm.netSalaryMontly)
+                    NameAndSum(name: "Yearly income", sum: $vm.netSalaryYearly)
                 }
             }
+            .onChange(of: vm.grossSalary, {
+                vm.updateAllCalculations()
+            })
+            .onChange(of: vm.personalContributionPercents, {
+                vm.updateAllCalculations()
+            })
+            .onChange(of: vm.companyContributionPercents, {
+                vm.updateAllCalculations()
+            })
+            .onChange(of: vm.privatePensionPercents, {
+                vm.updateAllCalculations()
+            })
             .formStyle(.grouped)
             .navigationTitle("🪙 Calculate your pension")
             .navigationBarTitleDisplayMode(.inline)
