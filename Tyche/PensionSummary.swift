@@ -12,6 +12,7 @@ struct GraphSection: Identifiable {
     var id = UUID()
     var name: String
     var contributionInPounds: Int
+    var color: Color
 }
 
 struct PensionSummary: View {
@@ -37,7 +38,7 @@ struct PensionSummary: View {
                 angularInset: 2
             )
             .cornerRadius(5)
-
+            .opacity(0.2)
             .foregroundStyle(by: .value("Name", section.name))
         }
         .scaledToFit()
@@ -48,6 +49,8 @@ struct PensionSummary: View {
               let frame = geometry[anchor]
               Text("Contributions")
                 .position(x: frame.midX, y: frame.midY)
+                .foregroundColor(.purple.opacity(0.8))
+                .fontWeight(.semibold)
             }
           }
         }
@@ -89,9 +92,9 @@ struct PensionSummary: View {
     }
     
     func updateSections() {
-        let personalContribution = GraphSection(name: "Personal", contributionInPounds: vm.personalContributionTotal)
-        let companyContribution = GraphSection(name: "Company", contributionInPounds: vm.companyContributionTotal)
-        let privateContribution = GraphSection(name: "Private", contributionInPounds: vm.privatePensionTotal)
+        let personalContribution = GraphSection(name: "Personal", contributionInPounds: vm.personalContributionTotal, color: .pink)
+        let companyContribution = GraphSection(name: "Company", contributionInPounds: vm.companyContributionTotal, color: .purple)
+        let privateContribution = GraphSection(name: "Private", contributionInPounds: vm.privatePensionTotal, color: .blue)
         self.sections = [personalContribution, companyContribution, privateContribution]
     }
 }
