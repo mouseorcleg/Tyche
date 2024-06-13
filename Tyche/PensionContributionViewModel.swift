@@ -34,6 +34,10 @@ class PensionContributionViewModel: ObservableObject {
     @Published var remainingPot: Int = 0
     @Published var annualIncome: Int = 0
     
+    @Published var personalContributionTotal: Int = 0
+    @Published var privatePensionTotal: Int = 0
+    @Published var companyContributionTotal: Int = 0
+    
     var personalTaxAllawance: Int = 12570
     var basicRateMax: Int = 50270
     var higherRateMax: Int = 125140
@@ -54,7 +58,10 @@ class PensionContributionViewModel: ObservableObject {
     }
     
     func calculatePension() {
-        self.pensionPot = calculateTotalPension()
+        self.pensionPot = calculateTotalPension().totalPension
+        self.personalContributionTotal = calculateTotalPension().personalContributionTotal
+        self.companyContributionTotal = calculateTotalPension().companyContributionTotal
+        self.privatePensionTotal = calculateTotalPension().privatePensionTotal
     }
     
     func updatePensionSummary() {
@@ -63,6 +70,26 @@ class PensionContributionViewModel: ObservableObject {
         self.annualIncome = remainingPot / 30
     }
     
+    func calculateTotalPension() -> (totalPension: Int, personalContributionTotal: Int, privatePensionTotal: Int, companyContributionTotal: Int) {
+        let remainingYears = 60 - currentAge
+        var totalPension: Int = 0
+        var personalContributionTotal: Int = 0
+        var privatePensionTotal: Int = 0
+        var companyContributionTotal: Int = 0
+        for _ in 0..<remainingYears {
+            let oneYearPersonalContribution = self.personalContributionPounds
+            let oneYearPrivatePension = self.privatePensionPounds
+            let oneYearCompanyContribution = self.companyContributionPounds
+            let oneYearTotalContribution = oneYearPersonalContribution + oneYearPrivatePension + oneYearCompanyContribution
+            let oneYearContributionInterest = oneYearTotalContribution / 100 * 7
+            let oneYearTotalContributionWithInterest = oneYearTotalContribution + oneYearContributionInterest
+            totalPension += oneYearTotalContributionWithInterest
+            personalContributionTotal += oneYearPersonalContribution
+            privatePensionTotal += oneYearPrivatePension
+            companyContributionTotal += oneYearCompanyContribution
+        }
+        return (totalPension, personalContributionTotal, privatePensionTotal, companyContributionTotal)
+    }
     
     
     func calculateTotalPension() -> Int {
