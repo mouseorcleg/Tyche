@@ -7,8 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A52CBBDE2C4285DA0024A93C /* CalculatorTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = A52CBBDD2C4285DA0024A93C /* CalculatorTextField.swift */; };
+		A52CBBE02C4286420024A93C /* CalculatorTextFieldWithPersents.swift in Sources */ = {isa = PBXBuildFile; fileRef = A52CBBDF2C4286420024A93C /* CalculatorTextFieldWithPersents.swift */; };
+		A52CBBE22C4286B20024A93C /* TitleAndSum.swift in Sources */ = {isa = PBXBuildFile; fileRef = A52CBBE12C4286B20024A93C /* TitleAndSum.swift */; };
 		A59EF4A62C1AFC670082D6B0 /* TycheApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = A59EF4A52C1AFC670082D6B0 /* TycheApp.swift */; };
-		A59EF4A82C1AFC670082D6B0 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A59EF4A72C1AFC670082D6B0 /* ContentView.swift */; };
+		A59EF4A82C1AFC670082D6B0 /* CalculatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A59EF4A72C1AFC670082D6B0 /* CalculatorView.swift */; };
 		A59EF4AA2C1AFC690082D6B0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A59EF4A92C1AFC690082D6B0 /* Assets.xcassets */; };
 		A59EF4AD2C1AFC690082D6B0 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A59EF4AC2C1AFC690082D6B0 /* Preview Assets.xcassets */; };
 		A59EF4B42C1B15B80082D6B0 /* PensionSummary.swift in Sources */ = {isa = PBXBuildFile; fileRef = A59EF4B32C1B15B80082D6B0 /* PensionSummary.swift */; };
@@ -16,9 +19,12 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		A52CBBDD2C4285DA0024A93C /* CalculatorTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculatorTextField.swift; sourceTree = "<group>"; };
+		A52CBBDF2C4286420024A93C /* CalculatorTextFieldWithPersents.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculatorTextFieldWithPersents.swift; sourceTree = "<group>"; };
+		A52CBBE12C4286B20024A93C /* TitleAndSum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleAndSum.swift; sourceTree = "<group>"; };
 		A59EF4A22C1AFC670082D6B0 /* Tyche.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Tyche.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A59EF4A52C1AFC670082D6B0 /* TycheApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TycheApp.swift; sourceTree = "<group>"; };
-		A59EF4A72C1AFC670082D6B0 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		A59EF4A72C1AFC670082D6B0 /* CalculatorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculatorView.swift; sourceTree = "<group>"; };
 		A59EF4A92C1AFC690082D6B0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A59EF4AC2C1AFC690082D6B0 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		A59EF4B32C1B15B80082D6B0 /* PensionSummary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PensionSummary.swift; sourceTree = "<group>"; };
@@ -36,6 +42,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		A52CBBDC2C4285BF0024A93C /* CustomViews */ = {
+			isa = PBXGroup;
+			children = (
+				A52CBBDD2C4285DA0024A93C /* CalculatorTextField.swift */,
+				A52CBBDF2C4286420024A93C /* CalculatorTextFieldWithPersents.swift */,
+				A52CBBE12C4286B20024A93C /* TitleAndSum.swift */,
+			);
+			path = CustomViews;
+			sourceTree = "<group>";
+		};
 		A59EF4992C1AFC670082D6B0 = {
 			isa = PBXGroup;
 			children = (
@@ -56,7 +72,8 @@
 			isa = PBXGroup;
 			children = (
 				A59EF4A52C1AFC670082D6B0 /* TycheApp.swift */,
-				A59EF4A72C1AFC670082D6B0 /* ContentView.swift */,
+				A59EF4A72C1AFC670082D6B0 /* CalculatorView.swift */,
+				A52CBBDC2C4285BF0024A93C /* CustomViews */,
 				A59EF4A92C1AFC690082D6B0 /* Assets.xcassets */,
 				A59EF4AB2C1AFC690082D6B0 /* Preview Content */,
 				A59EF4B32C1B15B80082D6B0 /* PensionSummary.swift */,
@@ -145,7 +162,10 @@
 			files = (
 				A59EF4B42C1B15B80082D6B0 /* PensionSummary.swift in Sources */,
 				A59EF4B62C1B20F30082D6B0 /* PensionContributionViewModel.swift in Sources */,
-				A59EF4A82C1AFC670082D6B0 /* ContentView.swift in Sources */,
+				A59EF4A82C1AFC670082D6B0 /* CalculatorView.swift in Sources */,
+				A52CBBE02C4286420024A93C /* CalculatorTextFieldWithPersents.swift in Sources */,
+				A52CBBE22C4286B20024A93C /* TitleAndSum.swift in Sources */,
+				A52CBBDE2C4285DA0024A93C /* CalculatorTextField.swift in Sources */,
 				A59EF4A62C1AFC670082D6B0 /* TycheApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

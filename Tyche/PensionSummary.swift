@@ -21,13 +21,8 @@ struct PensionSummary: View {
     
     @State var sections: [GraphSection] = []
     
-    var firstSectionFooter: some View {
-        HStack {
-            Spacer()
+    var firstSectionHeader: some View {
             Text("Assumptions based on retirement @60")
-                .fontDesign(.monospaced)
-            Spacer()
-        }
     }
     
     var pensionChart: some View {
@@ -58,20 +53,20 @@ struct PensionSummary: View {
     
     var body: some View {
         Form {
-            Section(header: Text(""), footer: firstSectionFooter) {
+            Section(header: firstSectionHeader, footer: Text("")) {
                 VStack {
                     pensionChart
                         .padding()
-                    NameAndSum(name: "Pension total", sum: $vm.pensionPot)
+                    TitleAndSum(title: "Pension total", sum: $vm.pensionPot)
                 }
-                TextFieldStack(textFieldName: "Tax free lump sum", value: $vm.taxFreeLumpSumPercent, endSymbol: "%")
-                TextFieldStack(textFieldName: "Your current age", value: $vm.currentAge, endSymbol: "years", bold: false)
+                CalculatorTextField(textFieldName: "Tax free lump sum", value: $vm.taxFreeLumpSumPercent, endSymbol: "%")
+                CalculatorTextField(textFieldName: "Your current age", value: $vm.currentAge, endSymbol: "years", bold: false)
             }
             
             Section("What's you get") {
-                NameAndSum(name: "Tax free lump sum", sum: $vm.taxFreeLumpSumPounds)
-                NameAndSum(name: "Remaining pot", sum: $vm.remainingPot)
-                NameAndSum(name: "Annual income after retirement", sum: $vm.annualIncome)
+                TitleAndSum(title: "Tax free lump sum", sum: $vm.taxFreeLumpSumPounds)
+                TitleAndSum(title: "Remaining pot", sum: $vm.remainingPot)
+                TitleAndSum(title: "Annual income after retirement", sum: $vm.annualIncome)
             }
         }
         .onAppear(perform: {
