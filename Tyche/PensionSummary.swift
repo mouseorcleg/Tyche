@@ -8,18 +8,11 @@
 import SwiftUI
 import Charts
 
-struct GraphSection: Identifiable {
-    var id = UUID()
-    var name: String
-    var contributionInPounds: Int
-    var color: Color
-}
-
 struct PensionSummary: View {
     
     @ObservedObject var vm: PensionContributionViewModel
     
-    @State var sections: [GraphSection] = []
+    @State var sections: [TycheGraphSection] = []
     
     var firstSectionHeader: some View {
             Text("Assumptions based on retirement @60")
@@ -87,9 +80,9 @@ struct PensionSummary: View {
     }
     
     func updateSections() {
-        let personalContribution = GraphSection(name: "Personal", contributionInPounds: vm.personalContributionTotal, color: .pink)
-        let companyContribution = GraphSection(name: "Company", contributionInPounds: vm.companyContributionTotal, color: .purple)
-        let privateContribution = GraphSection(name: "Private", contributionInPounds: vm.privatePensionTotal, color: .blue)
+        let personalContribution = TycheGraphSection(name: "Personal", contributionInPounds: vm.personalContributionTotal, color: .pink)
+        let companyContribution = TycheGraphSection(name: "Company", contributionInPounds: vm.companyContributionTotal, color: .purple)
+        let privateContribution = TycheGraphSection(name: "Private", contributionInPounds: vm.privatePensionTotal, color: .blue)
         self.sections = [personalContribution, companyContribution, privateContribution]
     }
 }

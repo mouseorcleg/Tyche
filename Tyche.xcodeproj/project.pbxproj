@@ -10,6 +10,7 @@
 		A52CBBDE2C4285DA0024A93C /* CalculatorTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = A52CBBDD2C4285DA0024A93C /* CalculatorTextField.swift */; };
 		A52CBBE02C4286420024A93C /* CalculatorTextFieldWithPersents.swift in Sources */ = {isa = PBXBuildFile; fileRef = A52CBBDF2C4286420024A93C /* CalculatorTextFieldWithPersents.swift */; };
 		A52CBBE22C4286B20024A93C /* TitleAndSum.swift in Sources */ = {isa = PBXBuildFile; fileRef = A52CBBE12C4286B20024A93C /* TitleAndSum.swift */; };
+		A540C66E2C5FED1B00ACFFE6 /* TycheGraphSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = A540C66D2C5FED1B00ACFFE6 /* TycheGraphSection.swift */; };
 		A59EF4A62C1AFC670082D6B0 /* TycheApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = A59EF4A52C1AFC670082D6B0 /* TycheApp.swift */; };
 		A59EF4A82C1AFC670082D6B0 /* CalculatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A59EF4A72C1AFC670082D6B0 /* CalculatorView.swift */; };
 		A59EF4AA2C1AFC690082D6B0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A59EF4A92C1AFC690082D6B0 /* Assets.xcassets */; };
@@ -22,6 +23,7 @@
 		A52CBBDD2C4285DA0024A93C /* CalculatorTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculatorTextField.swift; sourceTree = "<group>"; };
 		A52CBBDF2C4286420024A93C /* CalculatorTextFieldWithPersents.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculatorTextFieldWithPersents.swift; sourceTree = "<group>"; };
 		A52CBBE12C4286B20024A93C /* TitleAndSum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleAndSum.swift; sourceTree = "<group>"; };
+		A540C66D2C5FED1B00ACFFE6 /* TycheGraphSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TycheGraphSection.swift; sourceTree = "<group>"; };
 		A59EF4A22C1AFC670082D6B0 /* Tyche.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Tyche.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A59EF4A52C1AFC670082D6B0 /* TycheApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TycheApp.swift; sourceTree = "<group>"; };
 		A59EF4A72C1AFC670082D6B0 /* CalculatorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculatorView.swift; sourceTree = "<group>"; };
@@ -52,6 +54,14 @@
 			path = CustomViews;
 			sourceTree = "<group>";
 		};
+		A540C66C2C5FECE100ACFFE6 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				A540C66D2C5FED1B00ACFFE6 /* TycheGraphSection.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
 		A59EF4992C1AFC670082D6B0 = {
 			isa = PBXGroup;
 			children = (
@@ -71,6 +81,7 @@
 		A59EF4A42C1AFC670082D6B0 /* Tyche */ = {
 			isa = PBXGroup;
 			children = (
+				A540C66C2C5FECE100ACFFE6 /* Models */,
 				A59EF4A52C1AFC670082D6B0 /* TycheApp.swift */,
 				A59EF4A72C1AFC670082D6B0 /* CalculatorView.swift */,
 				A52CBBDC2C4285BF0024A93C /* CustomViews */,
@@ -166,6 +177,7 @@
 				A52CBBE02C4286420024A93C /* CalculatorTextFieldWithPersents.swift in Sources */,
 				A52CBBE22C4286B20024A93C /* TitleAndSum.swift in Sources */,
 				A52CBBDE2C4285DA0024A93C /* CalculatorTextField.swift in Sources */,
+				A540C66E2C5FED1B00ACFFE6 /* TycheGraphSection.swift in Sources */,
 				A59EF4A62C1AFC670082D6B0 /* TycheApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
