@@ -20,7 +20,6 @@ class PensionContributionViewModel: ObservableObject {
     @Published var privatePensionPounds: Int = 0
     
     @Published var calculatedTax: Int = 0
-    
     @Published var calculatedNI: Int = 0
     
     @Published var netSalaryMontly: Int = 0
@@ -186,32 +185,5 @@ class PensionContributionViewModel: ObservableObject {
         return (total: nationalInsuranceTotal, breakdown: nationalInsuranceBreakdown)
     }
 
-}
-
-
-struct Constants {
-    struct TaxAllowance {
-        let basicAllowance: Double
-        let taperThreshold: Double
-        let blindPersonsAllowance: Double
-    }
-    
-    struct NationalInsurance {
-        let lowerEarningsLimit: Double
-        let primaryThreshold: Double
-        let secondaryThreshold: Double
-        let upperEarningsLimit: Double
-        let employerRates: [Double]
-        let employeeRates: [Double]
-    }
-    
-    struct IncomeTaxBands {
-        let scotland: [(Double, Double)]
-        let restOfUK: [(Double, Double)]
-    }
-    
-    let taxAllowance: TaxAllowance
-    let nationalInsurance: NationalInsurance
-    let incomeTax: IncomeTaxBands
 }
 

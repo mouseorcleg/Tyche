@@ -13,7 +13,7 @@ struct CalculatorView: View {
     var submitButton: some View {
         HStack{
             Spacer()
-            NavigationLink(destination: PensionSummary(vm: vm), label: {
+            NavigationLink(destination: PensionSummaryView(vm: vm), label: {
                 Text("See Pension Summary")
                     .font(.title3)
                     .fontWeight(.semibold)

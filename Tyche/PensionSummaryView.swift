@@ -1,5 +1,5 @@
 //
-//  PensionSummary.swift
+//  PensionSummaryView.swift
 //  Tyche
 //
 //  Created by Maria Kharybina on 13/06/2024.
@@ -8,7 +8,7 @@
 import SwiftUI
 import Charts
 
-struct PensionSummary: View {
+struct PensionSummaryView: View {
     
     @ObservedObject var vm: PensionContributionViewModel
     
@@ -89,6 +89,6 @@ struct PensionSummary: View {
 
 #Preview {
     NavigationView{
-        PensionSummary(vm: PensionContributionViewModel())
+        PensionSummaryView(vm: PensionContributionViewModel())
     }
 }

@@ -11,11 +11,12 @@
 		A52CBBE02C4286420024A93C /* CalculatorTextFieldWithPersents.swift in Sources */ = {isa = PBXBuildFile; fileRef = A52CBBDF2C4286420024A93C /* CalculatorTextFieldWithPersents.swift */; };
 		A52CBBE22C4286B20024A93C /* TitleAndSum.swift in Sources */ = {isa = PBXBuildFile; fileRef = A52CBBE12C4286B20024A93C /* TitleAndSum.swift */; };
 		A540C66E2C5FED1B00ACFFE6 /* TycheGraphSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = A540C66D2C5FED1B00ACFFE6 /* TycheGraphSection.swift */; };
+		A540C6702C5FEEBA00ACFFE6 /* TycheConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = A540C66F2C5FEEBA00ACFFE6 /* TycheConstants.swift */; };
 		A59EF4A62C1AFC670082D6B0 /* TycheApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = A59EF4A52C1AFC670082D6B0 /* TycheApp.swift */; };
 		A59EF4A82C1AFC670082D6B0 /* CalculatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A59EF4A72C1AFC670082D6B0 /* CalculatorView.swift */; };
 		A59EF4AA2C1AFC690082D6B0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A59EF4A92C1AFC690082D6B0 /* Assets.xcassets */; };
 		A59EF4AD2C1AFC690082D6B0 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A59EF4AC2C1AFC690082D6B0 /* Preview Assets.xcassets */; };
-		A59EF4B42C1B15B80082D6B0 /* PensionSummary.swift in Sources */ = {isa = PBXBuildFile; fileRef = A59EF4B32C1B15B80082D6B0 /* PensionSummary.swift */; };
+		A59EF4B42C1B15B80082D6B0 /* PensionSummaryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A59EF4B32C1B15B80082D6B0 /* PensionSummaryView.swift */; };
 		A59EF4B62C1B20F30082D6B0 /* PensionContributionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A59EF4B52C1B20F30082D6B0 /* PensionContributionViewModel.swift */; };
 /* End PBXBuildFile section */
 
@@ -24,12 +25,13 @@
 		A52CBBDF2C4286420024A93C /* CalculatorTextFieldWithPersents.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculatorTextFieldWithPersents.swift; sourceTree = "<group>"; };
 		A52CBBE12C4286B20024A93C /* TitleAndSum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleAndSum.swift; sourceTree = "<group>"; };
 		A540C66D2C5FED1B00ACFFE6 /* TycheGraphSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TycheGraphSection.swift; sourceTree = "<group>"; };
+		A540C66F2C5FEEBA00ACFFE6 /* TycheConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TycheConstants.swift; sourceTree = "<group>"; };
 		A59EF4A22C1AFC670082D6B0 /* Tyche.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Tyche.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A59EF4A52C1AFC670082D6B0 /* TycheApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TycheApp.swift; sourceTree = "<group>"; };
 		A59EF4A72C1AFC670082D6B0 /* CalculatorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculatorView.swift; sourceTree = "<group>"; };
 		A59EF4A92C1AFC690082D6B0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A59EF4AC2C1AFC690082D6B0 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		A59EF4B32C1B15B80082D6B0 /* PensionSummary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PensionSummary.swift; sourceTree = "<group>"; };
+		A59EF4B32C1B15B80082D6B0 /* PensionSummaryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PensionSummaryView.swift; sourceTree = "<group>"; };
 		A59EF4B52C1B20F30082D6B0 /* PensionContributionViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PensionContributionViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -58,6 +60,7 @@
 			isa = PBXGroup;
 			children = (
 				A540C66D2C5FED1B00ACFFE6 /* TycheGraphSection.swift */,
+				A540C66F2C5FEEBA00ACFFE6 /* TycheConstants.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -84,11 +87,11 @@
 				A540C66C2C5FECE100ACFFE6 /* Models */,
 				A59EF4A52C1AFC670082D6B0 /* TycheApp.swift */,
 				A59EF4A72C1AFC670082D6B0 /* CalculatorView.swift */,
+				A59EF4B32C1B15B80082D6B0 /* PensionSummaryView.swift */,
+				A59EF4B52C1B20F30082D6B0 /* PensionContributionViewModel.swift */,
 				A52CBBDC2C4285BF0024A93C /* CustomViews */,
 				A59EF4A92C1AFC690082D6B0 /* Assets.xcassets */,
 				A59EF4AB2C1AFC690082D6B0 /* Preview Content */,
-				A59EF4B32C1B15B80082D6B0 /* PensionSummary.swift */,
-				A59EF4B52C1B20F30082D6B0 /* PensionContributionViewModel.swift */,
 			);
 			path = Tyche;
 			sourceTree = "<group>";
@@ -171,7 +174,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A59EF4B42C1B15B80082D6B0 /* PensionSummary.swift in Sources */,
+				A59EF4B42C1B15B80082D6B0 /* PensionSummaryView.swift in Sources */,
 				A59EF4B62C1B20F30082D6B0 /* PensionContributionViewModel.swift in Sources */,
 				A59EF4A82C1AFC670082D6B0 /* CalculatorView.swift in Sources */,
 				A52CBBE02C4286420024A93C /* CalculatorTextFieldWithPersents.swift in Sources */,
@@ -179,6 +182,7 @@
 				A52CBBDE2C4285DA0024A93C /* CalculatorTextField.swift in Sources */,
 				A540C66E2C5FED1B00ACFFE6 /* TycheGraphSection.swift in Sources */,
 				A59EF4A62C1AFC670082D6B0 /* TycheApp.swift in Sources */,
+				A540C6702C5FEEBA00ACFFE6 /* TycheConstants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
