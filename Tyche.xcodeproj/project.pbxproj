@@ -84,11 +84,11 @@
 		A59EF4A42C1AFC670082D6B0 /* Tyche */ = {
 			isa = PBXGroup;
 			children = (
-				A540C66C2C5FECE100ACFFE6 /* Models */,
 				A59EF4A52C1AFC670082D6B0 /* TycheApp.swift */,
 				A59EF4A72C1AFC670082D6B0 /* CalculatorView.swift */,
 				A59EF4B32C1B15B80082D6B0 /* PensionSummaryView.swift */,
 				A59EF4B52C1B20F30082D6B0 /* PensionContributionViewModel.swift */,
+				A540C66C2C5FECE100ACFFE6 /* Models */,
 				A52CBBDC2C4285BF0024A93C /* CustomViews */,
 				A59EF4A92C1AFC690082D6B0 /* Assets.xcassets */,
 				A59EF4AB2C1AFC690082D6B0 /* Preview Content */,
@@ -328,7 +328,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 1.1;
 				PRODUCT_BUNDLE_IDENTIFIER = com.mariakharybina.Tyche;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -357,7 +357,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 1.1;
 				PRODUCT_BUNDLE_IDENTIFIER = com.mariakharybina.Tyche;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
