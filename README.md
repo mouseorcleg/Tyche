@@ -8,7 +8,7 @@ We pledged to make free, easy to use and accessible tool to help people from all
 Here we should note that we would not be providing financial advice or education but the tool that can help to calculate what kind of pension you can expect to get based on your current salary, various pension contributions and pensions pods already set up. We are creating a tool to assist with long-term financial planning to people whose life is a bit too complicated for a standard pension calculator.
 
 ### Current state of the project
-After the Hackathon (yes, we won) we thought about our company mission statement, ironed out our project vision and started on our road map. For the first leg of our journey we decided to create a shared backend for web app and iOS app and start on basic salary and pension calculator with data that user should be able to save to theirs profile. In parallel, we are making sure that our pension calculation are correct and up to date - for that we are seeking help of financial adviser (if you are one and want to help - please drop us a message!). 
+After the Hackathon (yes, we won) we thought about our company mission statement, ironed out our project vision and started on our road map. For the first leg of our journey we decided to create a shared backend for web app and iOS app and start on basic salary and pension calculator with data that user should be able to save to theirs profile. In parallel, we are making sure that our pension calculation are correct and up to date - for that we are seeking help of financial adviser (if you are one and want to help - please drop us a [message](mailto:metistoolsuite@gmail.com)!). 
 
 ### Technologies we use
 * Cloud Firestorm to store user’s data;
@@ -16,7 +16,7 @@ After the Hackathon (yes, we won) we thought about our company mission statement
 * SwiftUI for iOS app;
 * JavaScript for the web app.
 
-We are currently planning to create web app and iOS app. If you are an Android developer and want to join in - we would love to have you, please drop us a message. 
+We are currently planning to create web app and iOS app. If you are an Android developer and want to join in - we would love to have you, please drop us a [message](mailto:metistoolsuite@gmail.com). 
 
 ### Metis* mission statement
 Metis is an organisation that aims to provide a centralised, accessible, free-to-use service that equips women, care-givers and single-parent households with reliable information to reduce the mental load and close the gap on financial decision making for those most commonly impacted financially by life events.
@@ -44,3 +44,7 @@ Bootcamp graduate developer with a background in Fashion retail.
 Passionate about building aesthetically pleasing, accessible websites and supporting women in tech! 
 Love to hike, run and spend time with loved ones when I’m not coding!  
 In this project: responsible for the web app.
+
+### Contact us
+If you have an idea, question, or want to join a project in any way, don't hesitate to reach out.  
+You can contact any of us on LinkedIn using the links above or drop us a line at metistoolsuite@gmail.com 👋
