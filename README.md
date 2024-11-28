@@ -26,13 +26,21 @@ The founders of Metis come from various socio-economic backgrounds, have all at 
 *Metis is the goddess of wisdom in Greek mythology and the name of our company 💪
 
 ### Who are we
-Maria Kharybina - community-taught iOS Developer with background in Education and Culture Studies. 
+**Maria Kharybina** || [LinkedIn](www.linkedin.com/in/maria-kharybina-b0993148)  
+Community-taught iOS Developer with background in Education and Culture Studies. 
 Passionate about accessibility, creating collaborative environments and supporting women in Tech. 
-Loves long walks, history podcasts and bookclubs.
-In the project: responsible for the mobile app.
+Loves long walks, history podcasts and bookclubs.  
+In this project: responsible for the mobile app. 
 
-Anna Benning - Agile Delivery Lead with a background in education, finance and retail. 
-Passionate about creatively solving problems and leaving things better than they were found!
-STEM Ambassador and advocate for women in tech.
-Love walking with my daughter, reading and spending time letting my son laugh at my attempts to play computer games.
-In this project: responsible for product planning.
+**Anna Benning** || [LinkedIn](http://www.linkedin.com/in/anna-benning-018b901b)  
+Agile Delivery Lead with a background in education, finance and retail. 
+Passionate about creatively solving problems and leaving things better than they were found! 
+STEM Ambassador and advocate for women in tech. 
+Love walking with my daughter, reading and spending time letting my son laugh at my attempts to play computer games.  
+In this project: responsible for product planning. 
+
+**Natalie Hurst-Knight** || [LinkedIn](https://www.linkedin.com/in/nataliehurst-knight/)  
+Bootcamp graduate developer with a background in Fashion retail. 
+Passionate about building aesthetically pleasing, accessible websites and supporting women in tech! 
+Love to hike, run and spend time with loved ones when I’m not coding!  
+In this project: responsible for the web app.
